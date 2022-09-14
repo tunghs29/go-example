@@ -6,6 +6,7 @@ import (
 	"Test/database"
 	"Test/modules/product/models"
 	"Test/modules/product/responsitory"
+	"fmt"
 	"github.com/gin-gonic/gin"
 	"net/http"
 )
@@ -28,5 +29,7 @@ func ListProduct(appCtx component.AppContext) gin.HandlerFunc {
 		}
 
 		c.JSON(http.StatusOK, common.SimpleSuccessResponse(result))
+
+		fmt.Println("hello")
 	}
 }
